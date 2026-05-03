@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy HTML to Public Link</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Deploy HTML ke Link Publik</h1>
+        
+        <div class="editor-section">
+            <h2>✏️ Editor HTML</h2>
+            <textarea id="htmlEditor" placeholder="Tulis HTML Anda di sini..."></textarea>
+            
+            <div class="button-group">
+                <button id="previewBtn" class="btn btn-primary">👁️ Preview</button>
+                <button id="deployBtn" class="btn btn-success">🌐 Deploy ke Publik</button>
+                <button id="clearBtn" class="btn btn-danger">🗑️ Clear</button>
+            </div>
+        </div>
+
+        <div class="preview-section" id="previewSection" style="display: none;">
+            <h2>📱 Preview</h2>
+            <iframe id="previewFrame" class="preview-frame"></iframe>
+        </div>
+
+        <div class="deploy-section" id="deploySection" style="display: none;">
+            <h2>✅ Berhasil Dideploy!</h2>
+            <div class="deploy-info">
+                <p><strong>Link Publik:</strong></p>
+                <div class="link-container">
+                    <input type="text" id="publicLink" readonly>
+                    <button id="copyBtn" class="btn btn-secondary">📋 Copy</button>
+                </div>
+                <a id="openLink" href="#" target="_blank" class="btn btn-link">🔗 Buka di Tab Baru</a>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>ℹ️ Informasi</h3>
+            <p>Kode Anda akan disimpan di localStorage dan bisa diakses melalui link publik unik.</p>
+            <p>Link: <code>https://html-preview.github.io/?url=[YOUR-CODE]</code></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
